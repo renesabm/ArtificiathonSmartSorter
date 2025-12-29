@@ -1,5 +1,4 @@
 import streamlit as st
-import cv2
 import numpy as np
 from PIL import Image
 import requests
@@ -71,7 +70,6 @@ if image:
     progress_bar.progress(80)
 
     predicted_class = np.argmax(predictions)
-    confidence = np.max(predictions) * 100
     progress_bar.progress(100)
     status_text.text("Operation complete!")
 
