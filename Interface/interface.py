@@ -7,7 +7,7 @@ import time
 
 @st.cache_resource
 def load_model():
-    model_path = "artificiationmobilenetv2_battery.py"
+    model_path = "ArtificiationMobileNetv2_battery1.keras"
     return tf.keras.models.load_model(
         model_path,
         compile=False
@@ -80,6 +80,7 @@ if image:
     progress_bar.empty()
     status_text.empty()
     st.button("Classify another image", on_click=start_over)
+
 
 
 
